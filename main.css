@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4daf54;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #4daf54, #3d8880);
+}
+
+.box {
+    margin: 120px auto;
+    width: 320px;
+    height: 400px;
+    background: #272d40;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    position: relative;
+}
+
+.heart, .cart {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    left: 15px;
+    top: 20px;
+}
+
+.cart {
+    left: unset;
+    right: 15px;
+}
+
+.shoes {
+    transition: 0.5s;
+    width: 90%;
+}
+
+.shoes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title h2 {
+    color: var(--primary-color);
+}
+
+.price {
+    transition: 0.5s;
+}
+
+.title {
+    transition: 0.5s;
+}
+
+.title h2, .price h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.action button {
+    background: var(--primary-color);
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 21px;
+}
+
+.box:hover .shoes {
+    transform: translateY(-90px) rotate(-20deg);
+}
+
+.box:hover .title{
+    transform: translateX(-50px) translateY(-60px);
+}
+
+.box:hover .price{
+    transform: translateX(-125px) translateY(-55px);
+}
+
+.size, .color {
+    display: flex;
+    align-items: center;
+}
+
+.size span {
+    font-size: 20px;
+    padding: 2px 5px;
+    background: #dadada;
+    color: black;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.color span {
+    font-size: 20px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+.color .green {
+    background: green;
+}
+
+.color .red {
+    background: red;
+}
+
+.color .black {
+    background: black;
+}
+
+.size {
+    margin-top: 180px;
+}
+
+.size, .color, .action {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.box:hover .size,
+.box:hover .color,
+.box:hover .action {
+    visibility: visible;
+    opacity: 100;
+}
+
+.box:hover .size {
+    margin-top: 0px;
+}
+
+.size, .color, .action {
+    transition: 0.5s;
+}
+
+button:hover {
+    color: black;
+    background: #8dff94;
+}
+
+button:active {
+    color: white;
+    background: #317135;
+}
